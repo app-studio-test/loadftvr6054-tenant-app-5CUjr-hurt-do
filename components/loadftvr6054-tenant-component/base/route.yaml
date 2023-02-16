@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadftvr6054-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadftvr6054-tenant-component
+    app.kubernetes.io/part-of: loadftvr6054-tenant-app
+  name: loadftvr6054-tenant-component
+  namespace: loadftvr6054-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadftvr6054-tenant-component
+    weight: null
+status: {}
